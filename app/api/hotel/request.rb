@@ -2,7 +2,7 @@ require 'rest-client'
 
 module Hotel
   class Request
-    BASE_URL = 'https://arcane-fortress-64263.herokuapp.com'
+    BASE_URL = 'YOUR_BASE_URL'
 
     def self.call(http_method:, endpoint:)
       result = RestClient::Request.execute(
