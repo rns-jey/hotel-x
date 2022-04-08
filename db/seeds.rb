@@ -11,12 +11,6 @@ users = User.create(
   ]
 )
 
-contactnumbers = ContactNumber.create(
-  [
-    { phone_number: "639064797001", is_default: true, user_id: 1 }
-  ]
-)
-
 bookings = Booking.create(
   [
     { start_date: "2022-04-11",

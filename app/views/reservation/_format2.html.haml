@@ -7,11 +7,13 @@
     %dl
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Full name
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 Wayne Woodbridge
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["first_name"] + " " + @reservation["last_name"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Email adress
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 wayne_woodbridge@bnb.com
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["email"]
 
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Phone number
