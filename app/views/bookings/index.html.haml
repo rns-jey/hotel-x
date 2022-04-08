@@ -8,8 +8,8 @@
           .hidden.md:block
             .ml-10.flex.items-baseline.space-x-4
               / Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
-              %a.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium{:href => "#"} Reservation
-              %a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium{"aria-current" => "page", :href => "#"} Bookings
+              = link_to 'Reservation', root_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              = link_to 'Bookings', bookings_index_path, class: "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
   %header.bg-white.shadow
     .max-w-8xl.mx-auto.py-6.px-4.sm:px-6.lg:px-8
       %h1.text-3xl.font-bold.text-gray-900 Reservation
