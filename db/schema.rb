@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_08_023230) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_08_023446) do
   create_table "contact_numbers", force: :cascade do |t|
     t.string "phone_number"
     t.boolean "is_default", default: false
@@ -18,6 +18,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_08_023230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_contact_numbers_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "nights"
+    t.integer "guests"
+    t.integer "adults"
+    t.integer "children"
+    t.integer "infants"
+    t.string "status_type"
+    t.string "currency"
+    t.decimal "payout_price", precision: 10, scale: 2
+    t.decimal "security_price", precision: 10, scale: 2
+    t.decimal "total_price", precision: 10, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
