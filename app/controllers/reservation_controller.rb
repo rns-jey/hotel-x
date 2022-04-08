@@ -77,7 +77,7 @@ class ReservationController < ApplicationController
 
     respond_to do |format|
         if booking.save
-          format.html { redirect_to :bookings_index, notice: "Reservation was successfully created." }
+          format.html { redirect_to :bookings_index, notice: "Reservation was successfully booked." }
         end
       end
   end
