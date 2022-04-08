@@ -9,63 +9,77 @@
         %dt.text-sm.font-medium.text-gray-500 Full name
         %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
           = @reservation["first_name"] + " " + @reservation["last_name"]
+          = @reservation["guest"]["first_name"] + " " + @reservation["guest"]["last_name"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Email adress
         %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
-          = @reservation["email"]
+          = @reservation["guest"]["email"]
 
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Phone number
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 639123456789
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["guest"]["phone"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Start date
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2020-03-12
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 
+          = @reservation["start_date"]
 
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 End date
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2020-03-16
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 
+          = @reservation["end_date"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Nights
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["nights"]
       
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Guests
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["guests"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Adults
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["adults"]
       
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Children
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["children"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Infants
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 0
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["infants"]
       
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Status
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 Accepted
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["status"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Currency
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 AUD
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["currency"]
       
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Payout price
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 3800.00
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["payout_price"]
 
       .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Security price
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 500.00
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["security_price"]
       
       .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
         %dt.text-sm.font-medium.text-gray-500 Total price
-        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4500.00
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2
+          = @reservation["total_price"]
       
       .bg-white.px-4.py-5.flex.justify-center
         = link_to 'Book reservation', reservation_index_path, data: { turbo_method: :post }, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"

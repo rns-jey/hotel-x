@@ -26,39 +26,22 @@ class ReservationController < ApplicationController
       @booking.security_price = @data["reservation"]["listing_security_price_accurate"]
       @booking.total_price = @data["reservation"]["total_paid_amount_accurate"]
     else
-      # @user.first_name = @data["guest"]["first_name"]
-      # @user.last_name = @data["guest"]["last_name"]
-      # @user.email = @data["guest"]["email"]
+      @user.first_name = @data["guest"]["first_name"]
+      @user.last_name = @data["guest"]["last_name"]
+      @user.email = @data["guest"]["email"]
 
-      # @booking.start_date = @data["start_date"]
-      # @booking.end_date = @data["end_date"]
-      # @booking.nights = @data["nights"]
-      # @booking.guests = @data["guests"]
-      # @booking.adults = @data["adults"]
-      # @booking.children = @data["children"]
-      # @booking.infants = @data["infants"]
-      # @booking.status_type = @data["status"]
-      # @booking.currency = @data["currency"]
-      # @booking.payout_price = @data["payout_price"]
-      # @booking.security_price = @data["security_price"]
-      # @booking.total_price = @data["total_price"]
-
-      @user.first_name = @data["first_name"]
-      @user.last_name = @data["last_name"]
-      @user.email = @data["email"]
-
-      @booking.start_date = "2020-03-12"
-      @booking.end_date = "2020-03-16"
-      @booking.nights = 4
-      @booking.guests = 4
-      @booking.adults = 2
-      @booking.children = 2
-      @booking.infants = 0
-      @booking.status_type = "Booked"
-      @booking.currency = "AUD"
-      @booking.payout_price = 3800.00
-      @booking.security_price = 500.00
-      @booking.total_price = 4500.00
+      @booking.start_date = @data["start_date"]
+      @booking.end_date = @data["end_date"]
+      @booking.nights = @data["nights"]
+      @booking.guests = @data["guests"]
+      @booking.adults = @data["adults"]
+      @booking.children = @data["children"]
+      @booking.infants = @data["infants"]
+      @booking.status_type = @data["status"]
+      @booking.currency = @data["currency"]
+      @booking.payout_price = @data["payout_price"]
+      @booking.security_price = @data["security_price"]
+      @booking.total_price = @data["total_price"]
     end
 
     book(@user, @booking)
@@ -91,10 +74,6 @@ class ReservationController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.fetch(:user, {})
-    end
-
-    def contactnumber_params
-      params.fetch(:contact_numer, {})
     end
 
     def booking_params
