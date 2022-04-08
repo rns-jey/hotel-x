@@ -4,7 +4,7 @@
   <h3 align="center">HOTEL-X</h3>
 
   <p align="center">
-    An app that two reservation payload formats and save it as an entry in a Booking model that belongs to a
+    An app that accepts two reservation payload formats and save it as an entry in a Booking model that belongs to a
 guest.
     <br />
     <a href="https://github.com/rns-jey/hotel-x"><strong>Explore the docs »</strong></a>
