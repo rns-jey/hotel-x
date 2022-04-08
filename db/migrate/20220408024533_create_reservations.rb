@@ -13,7 +13,7 @@ class CreateReservations < ActiveRecord::Migration[7.0]
       t.decimal :payout_price, precision: 10, scale: 2
       t.decimal :security_price, precision: 10, scale: 2
       t.decimal :total_price, precision: 10, scale: 2
-
+      
       t.timestamps
     end
   end
