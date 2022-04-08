@@ -117,12 +117,13 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
+### Version
 
-This is an example of how to list things you need to use the software and how to install them.
-* Install Rails at the command prompt if you haven't yet:
   ```
-  $ gem install rails
+  Ruby 3.1.1
+  Rails 7.0.2
+  NodeJS 16.14.0
+  Yarn 1.22.17
   ```
 
 ### Installation
