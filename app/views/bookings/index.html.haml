@@ -1,0 +1,62 @@
+.min-h-full
+  %nav.bg-gray-800
+    .max-w-7xl.mx-auto.px-4.sm:px-6.lg:px-8
+      .flex.items-center.justify-between.h-16
+        .flex.items-center
+          .flex-shrink-0
+            %img.h-8.w-8{:alt => "Workflow", :src => "https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"}/
+          .hidden.md:block
+            .ml-10.flex.items-baseline.space-x-4
+              / Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+              %a.text-gray-300.hover:bg-gray-700.hover:text-white.px-3.py-2.rounded-md.text-sm.font-medium{:href => "#"} Reservation
+              %a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium{"aria-current" => "page", :href => "#"} Bookings
+  %header.bg-white.shadow
+    .max-w-7xl.mx-auto.py-6.px-4.sm:px-6.lg:px-8
+      %h1.text-3xl.font-bold.text-gray-900 Reservation
+  %main
+    .max-w-7xl.mx-auto.py-6.sm:px-6.lg:px-8
+      - if notice.present?
+        %p{ :class => "py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block", :id => "notice" }
+          = notice
+    
+      %div{ class:"flex flex-col" }
+        %div{ class:"-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8" }
+          %div{ class:"py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" }
+            %div{ class:"shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" }
+              %table{ class:"min-w-full divide-y divide-gray-200" }
+                %thead{ class:"bg-gray-50" }
+                  %tr
+                    %th{ scope:"col", class:"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" }
+                      Guest name
+                    %th{ scope:"col", class:"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" }
+                      No. of guests
+                    %th{ scope:"col", class:"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" }
+                      Start date
+                    %th{ scope:"col", class:"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" }
+                      End date
+                    %th{ scope:"col", class:"px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" }
+                      Status
+                %tbody{ class:"bg-white divide-y divide-gray-200" }
+                  - @bookings.each do |booking|
+                    %tr
+                      %td{ class:"px-6 py-4 whitespace-nowrap" }
+                        %div{ class:"text-sm text-left text-gray-900" }
+                          = booking.guest_name
+                      
+                      %td{ class:"px-6 py-4 whitespace-nowrap" }
+                        %div{ class:"text-sm text-left text-gray-900" }
+                          = booking.guests
+
+                      %td{ class:"px-6 py-4 whitespace-nowrap" }
+                        %div{ class:"text-sm text-left text-gray-900" }
+                          = booking.start_date
+                      
+                      %td{ class:"px-6 py-4 whitespace-nowrap" }
+                        %div{ class:"text-sm text-left text-gray-900" }
+                          = booking.end_date
+
+                      %td{ class:"px-6 py-4 whitespace-nowrap" }
+                        %div{ class:"text-sm text-left text-gray-900" }
+                          = booking.status_type
+                      
+                      

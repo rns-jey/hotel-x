@@ -1,0 +1,69 @@
+/ This example requires Tailwind CSS v2.0+
+.bg-white.shadow.overflow-hidden.sm:rounded-lg
+  .px-4.py-5.sm:px-6
+    %h3.text-lg.leading-6.font-medium.text-gray-900 Reservation Information
+    %p.mt-1.max-w-2xl.text-sm.text-gray-500 Guest details and reservation.
+  .border-t.border-gray-200
+    %dl
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Full name
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 Wayne Woodbridge
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Email adress
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 wayne_woodbridge@bnb.com
+
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Phone number
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 639123456789
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Start date
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2020-03-12
+
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 End date
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2020-03-16
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Nights
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4
+      
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Guests
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Adults
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2
+      
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Children
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 2
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Infants
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 0
+      
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Status
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 Accepted
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Currency
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 AUD
+      
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Payout price
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 3800.00
+
+      .bg-white.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Security price
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 500.00
+      
+      .bg-gray-50.px-4.py-5.sm:grid.sm:grid-cols-3.sm:gap-4.sm:px-6
+        %dt.text-sm.font-medium.text-gray-500 Total price
+        %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4500.00
+      
+      .bg-white.px-4.py-5.flex.justify-center
+        = link_to 'Book reservation', reservation_index_path, data: { turbo_method: :post }, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
