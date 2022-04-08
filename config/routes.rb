@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bookings
   get 'bookings/index'
   get 'reservations/index'
   post 'reservations/index', to: 'reservations#book'

@@ -1,10 +1,10 @@
-<%= form_with(model: reservation, class: "contents") do |form| %>
-  <% if reservation.errors.any? %>
+<%= form_with(model: booking, class: "contents") do |form| %>
+  <% if booking.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
 
       <ul>
-        <% reservation.errors.each do |error| %>
+        <% booking.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
