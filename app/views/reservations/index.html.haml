@@ -16,5 +16,7 @@
       %h1.text-3xl.font-bold.text-gray-900 Reservation
   %main
     .max-w-7xl.mx-auto.py-6.sm:px-6.lg:px-8
-      = render "reservations/format1"
-      
+      - if @reservation.first.has_key?("reservation")
+        = render "reservations/format1"
+      - else
+        = render "reservations/format2"

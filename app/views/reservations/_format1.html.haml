@@ -66,4 +66,4 @@
         %dd.mt-1.text-sm.text-gray-900.sm:mt-0.sm:col-span-2 4500.00
       
       .bg-white.px-4.py-5.flex.justify-center
-        = link_to 'Book reservation', new_reservation_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
+        = link_to 'Book reservation', reservations_index_path, data: { turbo_method: :post }, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium"
